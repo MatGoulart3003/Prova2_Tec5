@@ -1,0 +1,14 @@
+<h1>Minha Biblioteca de Música</h1>
+
+<h3>Categorias:</h3>
+
+<div *ngFor="let cat of categoriaList">
+
+    <div>
+        {{cat.id}}
+        {{cat.name}}
+    </div>
+
+</div>
+
+<a routerLink="/musica">Musicas:</a>
