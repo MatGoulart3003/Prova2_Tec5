@@ -2,9 +2,9 @@
 
 <h3>Musicas:</h3>
 
-<ul *ngFor="let musica of musicaList">
+<ul *ngFor="let musica of musicaList" >
 
-    <li>
+    <li *ngIf="musica.category_id === 1">
         {{musica.id}}
         {{musica.filename}}
         {{musica.category_id}}

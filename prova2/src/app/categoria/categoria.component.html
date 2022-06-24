@@ -4,11 +4,24 @@
 
 <div *ngFor="let cat of categoriaList">
 
-    <div>
+    <div><a routerLink="/musica">
         {{cat.id}}
         {{cat.name}}
+        </a>
     </div>
 
 </div>
 
-<a routerLink="/musica">Musicas:</a>
+<form #myform="ngForm" (submit)="saveData(myform)">
+    <h4>
+        Nova categoria:
+    </h4>
+    <div>
+        <label>Nome:</label>
+        <input type="text" name="nome" [(ngModel)]="newCategoria.name">
+        <input type="submit" value="Salvar">
+    </div>
+
+</form>
+
+
